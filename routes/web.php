@@ -12,27 +12,25 @@
 */
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::prefix('/')
+    ->namespace('Home')
+    ->group(function () {
+        Route::resource('/', 'HomepageController');
+        // Route::resource('/ginstagram', 'GinstagramController');
+        // Route::resource('/program', 'ProgramController');
+        // Route::resource('/tv', 'TvController');
+        // Route::resource('/berita', 'BeritaController');
+    });
 
-Route::get('/belajar',function(){
-	return view('belajar');
-});
-
-Route::get('/hello', function () {
-    return 'selamat datang';
-});
-
-Route::get('/kontak', function () {
-    return 'nomer';
-});
-
-Route::get('/sepodius',function(){
-	return view ('sepodius');
-})->middleware('auth');
-
-
+Route::prefix('home')
+    ->namespace('Admin')
+    ->group(function () {
+        Route::resource('/', 'DashboardController');
+        Route::resource('/list', 'ListController');
+        // Route::resource('/galeri', 'GaleriController');
+        // Route::resource('/rekomendasi', 'RekomendasiController');
+        // Route::resource('/jadwaltv', 'JadwaltvController');
+    });
 
 Auth::routes();
 

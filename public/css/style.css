@@ -1,0 +1,50 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header .bawah .container .navbar .collapse ul li a {
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  background-color: #061b02;
+}
+
+main .list .container {
+  padding: 100px;
+}
+
+main .list .container .list-judul {
+  color: white;
+}
+
+main .list .container .list-judul hr {
+  width: 50px;
+  height: 3px;
+  color: #04fd04;
+}
+
+main .list .container .list-isi .owl-carousel .item {
+  text-decoration: none;
+}
+
+main .list .container .list-isi .owl-carousel .item .card {
+  background: none;
+}
+
+main .list .container .list-isi .owl-carousel .item .card .card-body {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.212);
+  border-left: 1px solid rgba(255, 255, 255, 0.192);
+  border-right: 1px solid rgba(255, 255, 255, 0.233);
+}
+
+main .list .container .list-isi .owl-carousel .item .card .card-body h5 {
+  color: green;
+}
+
+main .list .container .list-isi .owl-carousel .item .card .card-body p {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
